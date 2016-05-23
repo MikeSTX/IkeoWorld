@@ -1,0 +1,200 @@
+/* General CSS Style
+    > For commun style for "home" & "explorer" page
+    > for generals balises
+
+*/
+
+/* -- General color -- */
+.material-icons.white {color: #FFF;}
+.material-icons.black {color: #000;}
+.material-icons.red {color: #F44336;}
+.material-icons.blue {color: #2196F3;}
+.material-icons.green {color: #4CAF50;}
+.material-icons.yellow {color: #FFEB3B;}
+
+
+/* -- General balise -- */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+
+  /* Size */
+  height: 100%;
+
+  /* Color & shadow */
+  background-color: #ECEFF1;
+
+  /* Other */
+  overflow-y: scroll;
+
+}
+
+footer {
+  /* Position */
+  position: absolute;
+  bottom: 0;
+
+  /* Size */
+  width: 100%;
+  padding-top: 10px;
+  height: 30px;
+
+  /* Color & shadow */
+  background-color: transparent;
+  box-shadow: -1px -1px #000;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -- Commun style -- */
+.topMenu {
+
+  /* Position */
+  position: fixed;
+  display: block;
+
+  /* Size */
+  width: 100%;
+  height: 50px;
+
+  /* Color & shadow */
+  background-color: #2196F3;
+  box-shadow: 1px 1px #000;
+
+}
+
+  .homeButton {
+
+    /* Position */
+    position: relative;
+    display: inline;
+
+    /* Size */
+    width: 130px;
+    height: 40px;
+
+    /* Margin & padding */
+    margin-top: 5px;
+    margin-left: 30px;
+
+    /* Color & shadow */
+    background-color: inherit;
+
+    /* Border */
+    border: none;
+    border-radius: 4px;
+
+  }
+
+    .homeButton:hover {
+
+      /* Pointer */
+      cursor: pointer;
+
+      /* Color & shadow */
+      background-color: #1976D2;
+
+    }
+
+  .explorerButton {
+
+    /* Position */
+    position: relative;
+    display: inline;
+
+    /* Size */
+    width: 130px;
+    height: 40px;
+
+    /* Margin & padding */
+    margin-top: 5px;
+    margin-left: 15px;
+
+    /* Color & shadow */
+    background-color: inherit;
+
+    /* Border */
+    border: none;
+    border-radius: 4px;
+  }
+
+    .explorerButton:hover {
+
+      /* Pointer */
+      cursor: pointer;
+
+      /* Color & shadow */
+      background-color: #1976D2;
+    }
+
+  .textButton {
+
+    /* Position */
+    position: absolute;
+
+    /* Margin & padding */
+    margin-left: 12px;
+    margin-top: 0px;
+
+    /* Police */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Calibri;
+    color: #FFF;
+
+  }
+
+
+.content {
+
+  /* Position */
+  position: absolute;
+  display: block;
+
+  /* Size */
+  width: 100%;
+  height: auto;
+
+  /* margin & padding */
+  margin-top: 50px;
+
+}
+
+
+.tableFooter {
+
+  /* Size */
+  width: 100%;
+  height: 100%;
+
+  /* Margin & padding */
+  margin-bottom: 5px;
+
+}
+
+  .cellTableFooter {
+
+    /* Aligment */
+    text-align: center;
+    width: 33%;
+
+  }
+
+  .textTableFooter {
+
+    /* Police */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Calibri;
+    color: #000;
+  }
