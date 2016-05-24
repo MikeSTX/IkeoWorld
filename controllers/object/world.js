@@ -13,12 +13,12 @@
 //
 //
 // -------------------------------------------------------------------------- */
-var World = function(idWorld, name, width, length, backgroundColor) {
+var World = function(idWorld, name, width, height, backgroundColor) {
 
   this.idWorld = idWorld;
   this.name = name || 'Ikeo';
-  this.width = width || 20;
-  this.length = length || 20;
+  this.width = width || 10;
+  this.height = height || 10;
   this.backgroundColor = backgroundColor || '#FFFFFF';
 
 };

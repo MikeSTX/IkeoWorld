@@ -26,10 +26,10 @@ exports.Francky = function (idFrancky, name, icon, color, positionX, positionY, 
   this.idFrancky = idFrancky;
   this.name = name || "John";
   this.icon = icon || "mood";
-  this.color = color || "#2196F3";
+  this.color = color || "red";
   this.positionX = positionX || 1;
   this.positionY = positionY || 1;
-  this.orientation = orientation || "North";
+  this.orientation = orientation || "normal";
 
 };
 
@@ -57,8 +57,3 @@ exports.Francky.prototype.setPositionY = function(positionY) {
 exports.Francky.prototype.setOrientation = function(orientation) {
    this.orientation = orientation;
 }
-
-
-/*exports.Francky.prototype.getName() = function() {
-  return this.name;
-}*/

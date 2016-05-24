@@ -8,6 +8,6 @@
 exports.homeFactory = function(req, res) {
 
     console.log("> Display the view : home.ejs");
-    res.render('./home.ejs')
+    res.render('./home.ejs');
 
 };
