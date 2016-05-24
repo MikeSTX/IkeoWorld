@@ -1,0 +1,107 @@
+.divFranckyPresentation {
+
+    /* Position */
+    display: block;
+
+    /* Size */
+    width: 50%;
+    min-width: 50%;
+    height: auto;
+
+    /* Margin & padding */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 25px;
+
+
+    /* Color & shadow */
+    background-color: #CFD8DC;
+    box-shadow: 2px 2px #212121;
+}
+
+  .textFrancky {
+
+    /* Police */
+    color: #212121;
+    font-size: 20px;
+    font-family: Calibri;
+
+    /* Margin & padding */
+    margin-top: 5px;
+
+  }
+
+  .sep {
+
+    /* Position */
+		display: block;
+
+		/* largeur & longeur */
+		width: 80%;
+		size: 1;
+
+		/* Couleurs & ombrages */
+		border-color: #F44336;
+
+		/* margin & padding */
+    margin-left: auto;
+    margin-right: auto;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		padding: none;
+
+  }
+
+  .btnLinkExplore {
+
+    /* Position */
+    display: block;
+
+    /* Margin & padding */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+    /* Size */
+    width: 60%;
+    min-width: 320px;
+    height: 150px;
+
+
+    /* Color & shadow */
+    background-color: #F44336;
+    box-shadow: 2px 2px #212121;
+
+    /* Border */
+    border: none;
+    border-radius: 4px;
+
+  }
+
+    .btnLinkExplore:hover {
+
+      /* Color & shadow */
+      background-color: #D50000;
+      box-shadow: 3px 3px #212121;
+
+      /* Other */
+      cursor: pointer;
+
+    }
+
+  .textButtonExplore {
+
+    /* Position */
+    position: absolute;
+
+    /* Police */
+    color: #FFF;
+    font-size: 25px;
+    font-family: Calibri;
+
+    /* Margin & padding */
+    margin-left: 10px;
+    margin-top: 5px;
+
+  }

@@ -1,0 +1,174 @@
+.divTitleIkeo {
+
+  /* Position */
+  float: left;
+
+  /* Size */
+  width: 100%;
+  height: 200px;
+
+  /* Color & shadow */
+  background-color: #CFD8DC;
+  box-shadow: 2px 2px #212121;
+
+  /* Align child */
+  text-align: center;
+}
+
+  .textTitleIkeo {
+
+    /* Police */
+    font-size: 50px;
+    color: #607D8B;
+    font-family: Calibri;
+    font-weight: bold;
+
+    /* Margin & padding */
+    line-height: 180px;
+
+  }
+
+
+.LeftMenu {
+
+  /* Position */
+  position: absolute;;
+
+  /* Size */
+  width: 200px;
+  height: auto;
+
+  /* Margin & padding */
+  margin-top: 202px;
+  padding-top: 15px;
+
+  /* Color & shadow */
+  background-color: #CFD8DC;
+  box-shadow: 1px 1px #212121;
+
+}
+
+  .sepMenuLeft {
+
+    /* Position */
+		display: block;
+
+		/* largeur & longeur */
+		width: 100%;
+		size: 1;
+
+		/* Couleurs & ombrages */
+		border-color: #CFC9C4;
+
+		/* margin & padding */
+		margin-top: 7px;
+		margin-bottom: 7px;
+		padding: none;
+  }
+
+  .Francky {
+
+    /* Position */
+    float: left;
+    display: block;
+
+    /* Size */
+    width: 92%;
+    height: auto;
+
+    /* Margin & padding */
+    margin-left: 4%;
+    margin-bottom: 15px;
+
+    /* Border */
+    border-radius: 4px;
+
+  }
+
+    .nameFrancky {
+
+      /* Position */
+      position: absolute;
+
+      /* Police */
+      font-size: 20px;
+      font-family: Calibri;
+      font-weight: bold;
+
+      /* Margin & padding */
+      margin-left: 10px;
+      margin-top: 8px;
+
+    }
+
+    .informationFrancky {
+
+      /* Police */
+      font-family: Calibri;
+      font-size: 15px;
+
+      /* Margin & padding */
+      margin-left: 5px;
+    }
+
+  .controlTitle {
+
+    /* Police */
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 25px;
+
+    /* Margin & padding */
+    margin-top: 30px;
+    margin-left: 4%;
+  }
+
+  .textControl {
+    /* Police */
+    font-family: Calibri;
+    font-size: 15px;
+
+    /* Margin & padding */
+    margin-left: 5px;
+
+  }
+
+
+.tableIkeoWorld {
+
+  /* Position */
+  position: absolute;
+  display: block;
+
+  /* Margin & padding */
+  margin-top: 250px;
+  margin-left: 450px;
+  margin-bottom: 200px;
+
+}
+
+  .box {
+
+    /* Size */
+    width: 50px;
+    height: 50px;
+
+    /* Child alignment*/
+    text-align: center;
+
+    /* Color & shadow */
+    border: 1px solid black;
+
+  }
+
+  #iconFrancky {
+    padding: 2px;
+  }
+
+    #iconFrancky:hover{
+
+      /* Other */
+      cursor: pointer;
+      background-color: #BDBDBD;
+
+    }

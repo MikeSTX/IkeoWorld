@@ -7,9 +7,10 @@
     <!-- CSS Links -->
 		<link rel = "stylesheet" type = "text/css" href = "/CSS/generalStyle.css">
     <link rel = "stylesheet" type = "text/css" href = "/CSS/explorerStyle.css">
-    <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
+    <!-- Color paletet -->
+    <link rel="stylesheet" href = "/CSS/material-design-color-palette.min.css">
 
     <!-- Title page -->
 		<title>Ikeo World - Explore !</title>
@@ -26,7 +27,7 @@
       <!-- Buttons to navigate in the website -->
       <button class = "homeButton" onClick = "location.href='/home/'">
 
-          <i class = "material-icons white" style="margin-left: -90px">home</i>
+          <i class = "zmdi zmdi-home zmdi-hc-2x mdc-text-white-dark" style="margin-left: -90px;"></i>
           <span class = "textButton" >Home</span>
 
       </button>
@@ -34,7 +35,7 @@
 
       <button class = "explorerButton" onClick = "location.href='/explorer/'">
 
-          <i class = "material-icons white" style="margin-left: -90px">public</i>
+          <i class = "zmdi zmdi-globe zmdi-hc-2x mdc-text-white-dark" style="margin-left: -90px;"></i>
           <span class = "textButton" >Explorer</span>
 
       </button>
@@ -42,11 +43,77 @@
 
     <!-- Content -->
     <div class = 'content'>
-      bonjour
+
+      <div class = "divTitleIkeo">
+        <span class = "textTitleIkeo"><%=IkeoWorld.name%> world</span>
+      </div>
+
+      <div class = "LeftMenu">
+
+        <% for (iteratorFrancky = 0 ; iteratorFrancky < FranckyFamily.length; iteratorFrancky++) { %>
+          <div class = 'Francky'>
+
+            <p>
+              <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%> zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"></i>
+              <span class = 'nameFrancky'><%=FranckyFamily[iteratorFrancky].name %></span>
+            </p>
+
+            <p class = 'informationFrancky'><b>Position X : </b><%=FranckyFamily[iteratorFrancky].positionX %></p>
+            <p class = 'informationFrancky'><b>Position Y : </b><%=FranckyFamily[iteratorFrancky].positionY %></p>
+            <p class = 'informationFrancky'><b>Orientation : </b><%=FranckyFamily[iteratorFrancky].orientation %></p>
+
+          </div>
+
+        <% } %>
+
+        <hr class = 'sepMenuLeft'/>
+
+        <span class = 'controlTitle'>Controls :</span>
+        <br /><br />
+
+        <ul class="zmdi-hc-ul">
+
+          <li><i class="zmdi-hc-li zmdi zmdi-chevron-left"></i><span class = 'textControl'>turn 90° left</span></li>
+          <li><i class="zmdi-hc-li zmdi zmdi-chevron-right"></i><span class = 'textControl'>turn 90° right</span></li>
+          <li><i class="zmdi-hc-li zmdi zmdi-format-color-text"></i><span class = 'textControl'>move forward</span></li>
+
+        </ul>
+
+        <br /><br />
+
+      </div>
+
+      <table class = 'tableIkeoWorld'>
+        <% for (var iteratorRowBox = 1; iteratorRowBox <= IkeoWorld.height; iteratorRowBox++) { %>
+          <tr class = 'rowBox'>
+            <% for (var iteratorSmallBox = 1 ; iteratorSmallBox <= IkeoWorld.width ; iteratorSmallBox++) { %>
+              <td class = 'box' style = 'background-color: <%=IkeoWorld.backgroundColor%>;'>
+
+                <% for (iteratorFrancky = 0 ; iteratorFrancky < FranckyFamily.length; iteratorFrancky++) {
+
+                    if(FranckyFamily[iteratorFrancky].positionX == iteratorSmallBox && FranckyFamily[iteratorFrancky].positionY == iteratorRowBox) {
+                      if(iteratorFrancky == idFrancky) { %>
+                        <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%> zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
+                          id = "iconFrancky" style = 'background-color: #BDBDBD;' onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+                      <% } else { %>
+                        <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%> zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
+                          id = "iconFrancky" onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+                      <% } %>
+
+                     <% } %>
+
+                <% } %>
+              </td>
+            <% } %>
+          </tr>
+        <% } %>
+      </table>
+
+      <br /><br /><br /><br /><br /><br />
+
+
     </div>
 
-    <i class="material-icons">sentiment_satisfied</i>
-    bonjour home
 
     <!-- Footer -->
     <footer>

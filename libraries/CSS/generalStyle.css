@@ -4,14 +4,6 @@
 
 */
 
-/* -- General color -- */
-.material-icons.white {color: #FFF;}
-.material-icons.black {color: #000;}
-.material-icons.red {color: #F44336;}
-.material-icons.blue {color: #2196F3;}
-.material-icons.green {color: #4CAF50;}
-.material-icons.yellow {color: #FFEB3B;}
-
 
 /* -- General balise -- */
 *{
@@ -20,13 +12,9 @@
 }
 
 html {
-  height: 100%;
 }
 
 body {
-
-  /* Size */
-  height: 100%;
 
   /* Color & shadow */
   background-color: #ECEFF1;
@@ -38,7 +26,7 @@ body {
 
 footer {
   /* Position */
-  position: absolute;
+  position: fixed;
   bottom: 0;
 
   /* Size */
@@ -47,14 +35,29 @@ footer {
   height: 30px;
 
   /* Color & shadow */
-  background-color: transparent;
+  background-color: #ECEFF1;
   box-shadow: -1px -1px #000;
 
+}
+
+table {
+   border-collapse: collapse;
 }
 
 a {
   text-decoration: none;
 }
+
+h2 {
+
+  /* Police */
+  color: #2196F3;
+  font-size: 30px;
+  font-family: Calibri;
+  font-weight: bold;
+
+}
+
 
 /* -- Commun style -- */
 .topMenu {
@@ -144,7 +147,6 @@ a {
 
     /* Margin & padding */
     margin-left: 12px;
-    margin-top: 0px;
 
     /* Police */
     font-size: 20px;
@@ -159,7 +161,7 @@ a {
 
   /* Position */
   position: absolute;
-  display: block;
+  z-index: -1;
 
   /* Size */
   width: 100%;
