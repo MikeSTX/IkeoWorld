@@ -15,22 +15,22 @@ function moveForwardFrancky(idFrancky, orientationFrancky) {
   // Get id of INPUTS
   // ----------------------------------
   var id = document.getElementById(idFrancky);
-  var orientation = document.getElementById(orientationFrancky);
+  var orientation = document.getElementById(orientationFrancky).innerHTML;
 
   // Move the div Francky according to his/her orientation
-  if (orientation.innerHTML == 'North') {
+  if (orientation == 'North') {
 
-    moveYaxe(id, '-30px', -51);
+    moveYaxe(id, '-71px', -51);
 
-  } else if (orientation.innerHTML == 'South') {
+  } else if (orientation == 'South') {
 
     moveYaxe(id, '30px', 51);
 
-  } else if (orientation.innerHTML == 'West') {
+  } else if (orientation == 'West') {
 
-    moveXaxe(id, '-30px', -51);
+    moveXaxe(id, '-71px', -51);
 
-  } else if (orientation.innerHTML == 'East') {
+  } else if (orientation == 'East') {
 
     moveXaxe(id, '30px', 51);
 
@@ -58,11 +58,10 @@ function moveYaxe(id, nbPixelsMoveStart, nbPixelsMove) {
 
   if (id.style.marginTop == '') {
 
-    id.style.marginTop = nbPixelsMoveStart;
+      id.style.marginTop = nbPixelsMoveStart;
 
   } else {
     id.style.marginTop = '' + (parseInt(id.style.marginTop, 10) + (nbPixelsMove)) + 'px';
-
   }
 }
 
