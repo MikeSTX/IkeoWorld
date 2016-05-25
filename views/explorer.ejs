@@ -58,9 +58,9 @@
               <span class = 'nameFrancky'><%=FranckyFamily[iteratorFrancky].name %></span>
             </p>
 
-            <p class = 'informationFrancky'><b>Position X : </b><%=FranckyFamily[iteratorFrancky].positionX %></p>
-            <p class = 'informationFrancky'><b>Position Y : </b><%=FranckyFamily[iteratorFrancky].positionY %></p>
-            <p class = 'informationFrancky'><b>Orientation : </b><%=FranckyFamily[iteratorFrancky].orientation %></p>
+            <p class = 'informationFrancky'><b>Position X : </b><span id = "posXFrancky<%=iteratorFrancky%>"><%=FranckyFamily[iteratorFrancky].positionX %></span></p>
+            <p class = 'informationFrancky'><b>Position Y : </b><span id = "posYFrancky<%=iteratorFrancky%>"><%=FranckyFamily[iteratorFrancky].positionY %></span></p>
+            <p class = 'informationFrancky'><b>Orientation : </b><span id = "orientationFrancky<%=iteratorFrancky%>"><%=FranckyFamily[iteratorFrancky].orientation %></span></p>
 
           </div>
 
@@ -83,6 +83,8 @@
 
       </div>
 
+      <p id = 'messageFrancky'>Let's explorer the world !</p>
+
       <table class = 'tableIkeoWorld'>
         <% for (var iteratorRowBox = 1; iteratorRowBox <= IkeoWorld.height; iteratorRowBox++) { %>
           <tr class = 'rowBox'>
@@ -91,13 +93,30 @@
 
                 <% for (iteratorFrancky = 0 ; iteratorFrancky < FranckyFamily.length; iteratorFrancky++) {
 
-                    if(FranckyFamily[iteratorFrancky].positionX == iteratorSmallBox && FranckyFamily[iteratorFrancky].positionY == iteratorRowBox) {
-                      if(iteratorFrancky == idFrancky) { %>
-                        <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%> zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
-                          id = "iconFrancky" style = 'background-color: #BDBDBD;' onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+                    if(FranckyFamily[iteratorFrancky].positionX == iteratorSmallBox && FranckyFamily[iteratorFrancky].positionY == iteratorRowBox) { %>
+
+                      <% if(iteratorFrancky == idFrancky) { %>
+
+                        <div class = 'divFranckyOnMap' id = 'Francky<%=iteratorFrancky%>'
+                            style = 'background-color: #80CBC4;
+                                    -webkit-transition: all 0.1s ease-in-out;
+                                    -moz-transition: all 0.1s ease-in-out;
+                                    -o-transition: all 0.1s ease-in-out;
+                                    transition: all 0.1s ease-in-out;'>
+                          <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%>
+                                      zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
+                                      style = 'margin-left: auto; margin-right: auto; margin-top: 4px;'
+                                      onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+                        </div>
                       <% } else { %>
-                        <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%> zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
-                          id = "iconFrancky" onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+
+                        <div class = 'divFranckyOnMap' id = 'Francky<%=iteratorFrancky%>'>
+                          <i class = "zmdi zmdi-<%=FranckyFamily[iteratorFrancky].icon%>
+                                      zmdi-hc-2x mdc-text-<%=FranckyFamily[iteratorFrancky].color%>"
+                                      style = 'margin-left: auto; margin-right: auto; margin-top: 4px;'
+                                      onClick = "location.href='/explorer/<%=iteratorFrancky%>'"></i>
+                        </div>
+
                       <% } %>
 
                      <% } %>
@@ -120,27 +139,101 @@
 
       <table class = 'tableFooter'>
         <tr>
-          <td class = "cellTableFooter" style = 'text-align: left;'>
-            <span class = "textTableFooter"> Developed by Mike STX </span>
+          <td class = "cellTableFooter">
+            <i class="zmdi zmdi-coffee mdc-text-white-dark zmdi-hc-2x"></i>
+            <span class = "textTableFooter">Mike STX </span>
           </td>
 
           <td class = "cellTableFooter">
             <a href = "https://github.com/MikeSTX/">
-              <i class="zmdi zmdi-github-box" style = 'color: #424242;'></i>
-              <span class = "textTableFooter">Github</span>
+              <i class="zmdi zmdi-github-alt mdc-text-white-dark zmdi-hc-2x" id = "iconGithub"></i>
             </a>
           </td>
 
           <td class = "cellTableFooter">
             <a href = "https://www.linkedin.com/in/thibault-bruhiere-30145a82?trk=hp-identity-name">
-              <i class="zmdi zmdi-linkedin-box" style = 'color: #2979FF;'></i>
-              <span class = "textTableFooter">LinkedIn</span>
+              <i class="zmdi zmdi-linkedin mdc-text-white-dark zmdi-hc-2x" id = "iconGithub"></i>
             </a>
           </td>
         </tr>
       </table>
 
     </footer>
+
+
+
+
+    <!-- JavaScript libraries -->
+
+    <!-- Link for bootstap framework -->
+    <script src = "/javaScript/checkFranckyMovement.js"></script>
+		<script src = "/javaScript/moveFrancky.js"></script>
+    <script src = "/javaScript/updateFranckyInformations.js"></script>
+
+
+    <!-- Event listener to keypressed -->
+    <script type = "text/javascript">
+
+      <% if (idFrancky >= 0) { %>
+
+        addEventListener("keydown", function(keyboard) {
+
+          if(keyboard.keyCode == 65) {
+
+            // Check if the Francky can move forward
+            // 2 rules :
+            //   > Not going out of the World
+            //   > not on a box of another francky
+            // -----------------------------------------------------------------
+            var stateMoveOnX = checkXLimit("orientationFrancky<%=idFrancky%>", "posXFrancky<%=idFrancky%>",  <%=IkeoWorld.width%>);
+            var stateMoveOnY = checkYLimit("orientationFrancky<%=idFrancky%>", "posYFrancky<%=idFrancky%>",  <%=IkeoWorld.height%>);
+
+            if (stateMoveOnX == false || stateMoveOnY == false) {
+              document.getElementById('messageFrancky').innerHTML = 'I am going to fall ...';
+              document.getElementById('messageFrancky').style.color = '#F44336';
+              return;
+            }
+
+            // Test position for all the FranckyFamily
+           for (iteratorFrancky = 0; iteratorFrancky < <%=FranckyFamily.length%>; iteratorFrancky++) {
+
+              var stateMove = checkOtherFrancky("orientationFrancky<%=idFrancky%>", "posXFrancky<%=idFrancky%>", "posXFrancky" + iteratorFrancky.toString(), "posYFrancky<%=idFrancky%>", "posYFrancky" + iteratorFrancky.toString());
+
+              if (stateMove == false) {
+                document.getElementById('messageFrancky').innerHTML = 'There is already another Francky';
+                document.getElementById('messageFrancky').style.color = '#F44336';
+                return;
+              }
+
+            }
+
+
+            // If it's ok, let's move the Francky and update informations on the
+            // view
+            // -----------------------------------------------------------------
+            document.getElementById('messageFrancky').innerHTML = 'What a wonderful world !';
+            document.getElementById('messageFrancky').style.color = '#00897B';
+
+            moveForwardFrancky("Francky<%=idFrancky%>", "orientationFrancky<%=idFrancky%>");
+            updatePositionX("posXFrancky<%=idFrancky%>", "orientationFrancky<%=idFrancky%>");
+            updatePositionY("posYFrancky<%=idFrancky%>", "orientationFrancky<%=idFrancky%>");
+
+          } else if (keyboard.keyCode == 39) {
+
+            turnRight("Francky<%=idFrancky%>");
+            updateOrientationInformation("orientationFrancky<%=idFrancky%>", 1)
+
+          } else if (keyboard.keyCode == 37) {
+
+            turnLeft("Francky<%=idFrancky%>");
+            updateOrientationInformation("orientationFrancky<%=idFrancky%>", 0)
+
+          }
+        });
+
+      <% } %>
+
+    </script>
 
   </body>
 
