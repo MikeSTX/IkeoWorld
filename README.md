@@ -23,5 +23,9 @@ But there's some strict rules to respect in Ikeo Word !
 #### Frameworks #
 
 In this project, we'll use :
-* Node.JS  
+* Node.JS with modules :
+  * express  <code> npm install express </code>
+  * ejs <code> npm install ejs </code>
+  * extended-console (falcutatif) <code> npm install extended-console </code>
+
 ![Node.JS logo](https://cs.fit.edu/code/projects/nothing_works/repository/revisions/4051c2843b17f481374036be0860b870f52be75a/entry/doc/images/download-logo.png "Node.JS")
