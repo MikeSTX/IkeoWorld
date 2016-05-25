@@ -32,28 +32,3 @@ exports.Francky = function (idFrancky, name, icon, color, positionX, positionY, 
   this.orientation = orientation || "normal";
 
 };
-
-
-
-
-//
-//
-// Methods to set new position (X & Y axes)
-// -----------------------------------------------------------
-exports.Francky.prototype.setPositionX = function(positionX) {
-   this.positionX = positionX;
-}
-
-
-exports.Francky.prototype.setPositionY = function(positionY) {
-   this.positionY = positionY;
-}
-
-
-//
-//
-// Methods to set new orientation
-// -----------------------------------------------------------
-exports.Francky.prototype.setOrientation = function(orientation) {
-   this.orientation = orientation;
-}

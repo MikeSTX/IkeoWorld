@@ -5,6 +5,7 @@
 */
 
 
+
 /* -- General balise -- */
 *{
   margin: 0;
@@ -32,16 +33,22 @@ footer {
   /* Size */
   width: 100%;
   padding-top: 10px;
-  height: 30px;
+  height: 40px;
 
   /* Color & shadow */
-  background-color: #ECEFF1;
+  background-color: #00796B;
   box-shadow: -1px -1px #000;
 
 }
 
+
+button {
+  outline: none;
+}
+
 table {
-   border-collapse: collapse;
+    margin-top: -5px;
+    border-collapse: collapse;
 }
 
 a {
@@ -51,7 +58,7 @@ a {
 h2 {
 
   /* Police */
-  color: #2196F3;
+  color: #00796B;
   font-size: 30px;
   font-family: Calibri;
   font-weight: bold;
@@ -71,8 +78,8 @@ h2 {
   height: 50px;
 
   /* Color & shadow */
-  background-color: #2196F3;
-  box-shadow: 1px 1px #000;
+  background-color: #00695C;
+  box-shadow: 2px 2px #000;
 
 }
 
@@ -105,7 +112,7 @@ h2 {
       cursor: pointer;
 
       /* Color & shadow */
-      background-color: #1976D2;
+      background-color: #004D40;
 
     }
 
@@ -137,7 +144,7 @@ h2 {
       cursor: pointer;
 
       /* Color & shadow */
-      background-color: #1976D2;
+      background-color: #004D40;
     }
 
   .textButton {
@@ -183,6 +190,9 @@ h2 {
   margin-bottom: 5px;
 
 }
+  #iconGithub:hover {
+    color: #FFF;
+  }
 
   .cellTableFooter {
 
@@ -195,8 +205,11 @@ h2 {
   .textTableFooter {
 
     /* Police */
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     font-family: Calibri;
-    color: #000;
+    color: #FFF;
+
+    /* Margin & padding */
+    margin-left: 15px;
   }

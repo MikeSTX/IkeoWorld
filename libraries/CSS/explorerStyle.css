@@ -8,7 +8,7 @@
   height: 200px;
 
   /* Color & shadow */
-  background-color: #CFD8DC;
+  background-color: #00796B;
   box-shadow: 2px 2px #212121;
 
   /* Align child */
@@ -19,7 +19,7 @@
 
     /* Police */
     font-size: 50px;
-    color: #607D8B;
+    color: #E0F2F1;
     font-family: Calibri;
     font-weight: bold;
 
@@ -53,17 +53,18 @@
     /* Position */
 		display: block;
 
-		/* largeur & longeur */
-		width: 100%;
+		/* Size */
+		width: 90%;
 		size: 1;
 
 		/* Couleurs & ombrages */
 		border-color: #CFC9C4;
 
 		/* margin & padding */
-		margin-top: 7px;
-		margin-bottom: 7px;
-		padding: none;
+		margin-top: 15px;
+		margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .Francky {
@@ -133,6 +134,22 @@
 
   }
 
+#messageFrancky {
+
+  /* Position */
+  position: absolute;
+  float: left;
+
+  /* Margin & padding */
+  margin-top: 220px;
+  margin-left: 450px;;
+
+  /* Police */
+  font-family: Calibri;
+  font-size: 23px;
+  font-weight: bold;
+  color: #00897B;
+}
 
 .tableIkeoWorld {
 
@@ -161,14 +178,35 @@
 
   }
 
-  #iconFrancky {
-    padding: 2px;
+  .divFranckyOnMap {
+
+    /* Position */
+    position: absolute;
+    display: inline-block;
+    float: left;
+
+    /* Size */
+    width: 40px;
+    height: 40px;
+
+    /* Margin & padding */
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: 0px;
+
+    /* Color & shadow */
+    background-color: #FAFAFA;
+    box-shadow: 1px 1px #000;
+
   }
 
-    #iconFrancky:hover{
+    .divFranckyOnMap:hover {
+
+      /* Color & shadow */
+      background-color: #80CBC4;
+      box-shadow: 2px 2px #000;
 
       /* Other */
       cursor: pointer;
-      background-color: #BDBDBD;
 
     }
