@@ -19,7 +19,7 @@ function updateOrientationInformation(idFranckyOrientation, sense) {
   // ------------------------------------------------------------
 
   // Turn left
-  if (sense == 0) {
+  if (sense == 1) {
 
     if (oldOrientation == 'South') {
       orientation = 'West';
@@ -31,7 +31,7 @@ function updateOrientationInformation(idFranckyOrientation, sense) {
       orientation = 'South';
     }
 
-  } else if (sense == 1) { // Turn right
+  } else if (sense == 0) { // Turn right
 
     if (oldOrientation == 'South') {
       orientation = 'East';
