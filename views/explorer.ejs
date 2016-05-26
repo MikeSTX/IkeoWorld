@@ -13,7 +13,7 @@
     <link rel="stylesheet" href = "/CSS/material-design-color-palette.min.css">
 
     <!-- Title page -->
-		<title>Ikeo World - Explore !</title>
+		<title><%=IkeoWorld.name%> World - Explore !</title>
 
   </head>
 
@@ -86,7 +86,7 @@
       <p id = 'messageFrancky'>Let's explorer the world !</p>
 
       <table class = 'tableIkeoWorld'>
-        <% for (var iteratorRowBox = 1; iteratorRowBox <= IkeoWorld.height; iteratorRowBox++) { %>
+        <% for (var iteratorRowBox = IkeoWorld.height; iteratorRowBox > 0; iteratorRowBox--) { %>
           <tr class = 'rowBox'>
             <% for (var iteratorSmallBox = 1 ; iteratorSmallBox <= IkeoWorld.width ; iteratorSmallBox++) { %>
               <td class = 'box' style = 'background-color: <%=IkeoWorld.backgroundColor%>;'>
@@ -135,7 +135,13 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer id = "idFooter"
+            style = '-webkit-transition: all 0.1s ease-in-out;
+                     -moz-transition: all 0.1s ease-in-out;
+                     -o-transition: all 0.1s ease-in-out;
+                      transition: all 0.1s ease-in-out;'
+            onMouseOver = "setFooterUp('idFooter')"
+            onMouseOut = "setFooterDown('idFooter')" >
 
       <table class = 'tableFooter'>
         <tr>
@@ -164,8 +170,8 @@
 
 
     <!-- JavaScript libraries -->
-
-    <!-- Link for bootstap framework -->
+    <script src = "/javaScript/generalFunction/animateFooter.js"></script>
+    
     <script src = "/javaScript/checkFranckyMovement.js"></script>
 		<script src = "/javaScript/moveFrancky.js"></script>
     <script src = "/javaScript/updateFranckyInformations.js"></script>

@@ -59,13 +59,13 @@ function checkYLimit(idOrientation, idFranckyPositionY, heightOfWorld) {
 
   // Deal with up side
   // -----------------------------------------
-  if ((intPosY == 1) && (orientation == 'North')) {
+  if ((intPosY == heightOfWorld) && (orientation == 'North')) {
     return false;
   }
 
   // Deal with down side
   // -----------------------------------------
-  if ((intPosY == heightOfWorld) && (orientation == 'South')) {
+  if ((intPosY == 1) && (orientation == 'South')) {
     return false;
   }
 
@@ -79,9 +79,10 @@ function checkYLimit(idOrientation, idFranckyPositionY, heightOfWorld) {
 
 
 /*
-  checkOtherFranckyOnX
+  checkOtherFrancky
   --------------------------------
-  This function check if there's another Franck next current Franck on the X axe
+  This function check if there's another Franck next current Franck on the next
+  box
 
   INPUTS :
     > idOrientation : to know where Francky want to move
@@ -118,13 +119,13 @@ function checkOtherFrancky(idOrientation, idCurrentFranckyPositionX, idFranckyPo
 
   } else if (orientation == 'North') {
 
-    if ((intPosY == intCurrentPosY - 1) && (intPosX == intCurrentPosX)) {
+    if ((intPosY == intCurrentPosY + 1) && (intPosX == intCurrentPosX)) {
       return false;
     }
 
   } else if (orientation == 'South') {
 
-    if ((intPosY == intCurrentPosY + 1) && (intPosX == intCurrentPosX)) {
+    if ((intPosY == intCurrentPosY - 1) && (intPosX == intCurrentPosX)) {
       return false;
     }
   }

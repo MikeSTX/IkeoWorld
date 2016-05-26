@@ -28,12 +28,15 @@ body {
 footer {
   /* Position */
   position: fixed;
-  bottom: 0;
+  bottom: -38px;
 
   /* Size */
   width: 100%;
   padding-top: 10px;
   height: 40px;
+
+  /* Margin & padding */
+  margin-top: 30px;
 
   /* Color & shadow */
   background-color: #00796B;

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href = "/CSS/material-design-color-palette.min.css">
 
     <!-- Title page -->
-		<title>Ikeo World - home</title>
+		<title><%=IkeoWorld.name%> World - home</title>
 
   </head>
 
@@ -62,15 +62,15 @@
         </p>
 
           <h2 style="text-align: right">
-            New world : Ikeo
+            New world : <%=IkeoWorld.name%>
             <i class = "zmdi zmdi-globe zmdi-hc-2x mdc-text-teal-700" style="margin-left: 10px;"></i>
           </h2>
 
           <p class = 'textFrancky' style="text-align: right">
             <br />
-            The new world is called <b>'Ikeo'</b>, and there's some rules to respect to survive in this wild environment.
+            The new world is called <b><%=IkeoWorld.name%></b>, and there's some rules to respect to survive in this wild environment.
             <br />
-            First, Ikeo is a rectangular area compose with small box. There's 10 boxs on X axis and 10 boxs on Y axis. We can't go out of these box, otherwise we fall into the void.
+            First, Ikeo is a rectangular area compose with small box. There's <%=IkeoWorld.width%> boxs on X axis and <%=IkeoWorld.height%> boxs on Y axis. We can't go out of the world, otherwise we fall into the void.
             Also, we can't be several Francky on the same box, there're just to small to shelter 2 humans !
             <br /><br />
             Now, you know everything about what's coming ;)
@@ -99,7 +99,13 @@
 
 
     <!-- Footer -->
-    <footer>
+    <footer id = "idFooter"
+            style = '-webkit-transition: all 0.1s ease-in-out;
+                     -moz-transition: all 0.1s ease-in-out;
+                     -o-transition: all 0.1s ease-in-out;
+                      transition: all 0.1s ease-in-out;'
+            onMouseOver = "setFooterUp('idFooter')"
+            onMouseOut = "setFooterDown('idFooter')" >
 
       <table class = 'tableFooter'>
         <tr>
@@ -123,6 +129,9 @@
       </table>
 
     </footer>
+
+    <!-- JavaScript libraries -->
+    <script src = "/javaScript/generalFunction/animateFooter.js"></script>
 
   </body>
 

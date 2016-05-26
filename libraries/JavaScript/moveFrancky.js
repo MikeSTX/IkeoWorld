@@ -5,7 +5,7 @@
   orientation - called when the user pressed 'a' or 'A' key
 
   INPUTS :
-    > id Francky : (string) to know what Francky is controled by the user
+    > id Francky : to get the id of the Francky controled by the user
 
   OUTPUTS :
     > none

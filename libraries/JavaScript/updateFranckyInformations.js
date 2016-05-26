@@ -113,13 +113,13 @@ function updatePositionY(idFranckyPositionY, idOrientation) {
   if (orientation == 'North') {
 
     var intOldPosY = parseInt(oldPosY, 10);
-    var posY = intOldPosY - 1;
+    var posY = intOldPosY + 1;
     document.getElementById(idFranckyPositionY).textContent = posY.toString();
 
   }  else if (orientation == 'South') {
 
     var intOldPosY = parseInt(oldPosY, 10);
-    var posY = intOldPosY + 1;
+    var posY = intOldPosY - 1;
     document.getElementById(idFranckyPositionY).textContent = posY.toString();
   }
 
