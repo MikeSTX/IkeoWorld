@@ -171,7 +171,7 @@
 
     <!-- JavaScript libraries -->
     <script src = "/javaScript/generalFunction/animateFooter.js"></script>
-    
+
     <script src = "/javaScript/checkFranckyMovement.js"></script>
 		<script src = "/javaScript/moveFrancky.js"></script>
     <script src = "/javaScript/updateFranckyInformations.js"></script>
@@ -226,12 +226,12 @@
 
           } else if (keyboard.keyCode == 39) {
 
-            turnRight("Francky<%=idFrancky%>");
+            turnFrancky("Francky<%=idFrancky%>", 90);
             updateOrientationInformation("orientationFrancky<%=idFrancky%>", 1)
 
           } else if (keyboard.keyCode == 37) {
 
-            turnLeft("Francky<%=idFrancky%>");
+            turnFrancky("Francky<%=idFrancky%>", -90);
             updateOrientationInformation("orientationFrancky<%=idFrancky%>", 0)
 
           }

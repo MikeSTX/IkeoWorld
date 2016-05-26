@@ -93,9 +93,8 @@ function moveXaxe(id, nbPixelsMoveStart, nbPixelsMove) {
 }
 
 
-
 /*
-  turnLeft
+  turnFrancky
   --------------------------------
   This function let Francky turn left 90° - called when the user pressed
   "left arrow"
@@ -106,7 +105,7 @@ function moveXaxe(id, nbPixelsMoveStart, nbPixelsMove) {
   OUTPUTS :
     > none
 ______________________________________________________________________________*/
-function turnLeft(idFrancky) {
+function turnFrancky(idFrancky, angle) {
 
   // Get id Francky & his/her current rotation
   var id = document.getElementById(idFrancky);
@@ -116,7 +115,7 @@ function turnLeft(idFrancky) {
   // Rotate it
   // -------------------------
   var rotated = false;
-  deg = rotated ? currentAngle : currentAngle + 90;
+  deg = rotated ? currentAngle : currentAngle + angle;
 
   id.style.webkitTransform = 'rotate('+deg+'deg)';
   id.style.mozTransform    = 'rotate('+deg+'deg)';
@@ -124,41 +123,6 @@ function turnLeft(idFrancky) {
   id.style.oTransform      = 'rotate('+deg+'deg)';
   id.style.transform       = 'rotate('+deg+'deg)';
 
-}
-
-
-
-
-
-/*
-  turnRight
-  --------------------------------
-  This function let Francky turn rigth 90° - called when the user pressed
-  "right arrow"
-
-  INPUTS :
-    > id Francky : (string) to know what Francky is controled by the user
-
-  OUTPUTS :
-    > none
-______________________________________________________________________________*/
-function turnRight(idFrancky) {
-
-  // Get id Francky & his/her current rotation
-  var id = document.getElementById(idFrancky);
-  currentAngle = getCurrentAngle(id);
-
-
-  // Rotate it
-  // -------------------------
-  var rotated = false;
-  deg = rotated ? currentAngle : currentAngle - 90;
-
-  id.style.webkitTransform = 'rotate('+deg+'deg)';
-  id.style.mozTransform    = 'rotate('+deg+'deg)';
-  id.style.msTransform     = 'rotate('+deg+'deg)';
-  id.style.oTransform      = 'rotate('+deg+'deg)';
-  id.style.transform       = 'rotate('+deg+'deg)';
 }
 
 
